@@ -1,5 +1,12 @@
+/* General Styles */
 body {
     font-family: Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #33372C;
+}
+
+h1, h2, p {
     margin: 0;
     padding: 0;
     color: #33372C;
@@ -8,25 +15,23 @@ body {
 h1 {
     font-size: 40px;
     text-align: center;
-    color: #33372C;
 }
 
 h2 {
     font-size: 24px;
     text-align: center;
-    color: #33372C;
 }
 
 p {
     font-size: 18px;
     text-align: justify;
-    color: #33372C;
 }
 
 section {
     padding: 0;
 }
 
+/* Navbar Styles */
 .navbar {
     background-color: #557C56;
     overflow: hidden;
@@ -44,6 +49,13 @@ section {
     padding: 0;
 }
 
+.navbar nav {
+    display: flex;
+    justify-content: space-evenly; 
+    flex-grow: 1; 
+    margin-left: 1px; 
+}
+
 .navbar a {
     color: #FFE5CF;
     padding: 14px 20px;
@@ -58,6 +70,7 @@ section {
     color: black;
 }
 
+/* Homepage Section */
 .homepage {
     position: relative;
     height: 100vh;
@@ -67,19 +80,19 @@ section {
 
 .homepage-text {
     position: absolute;
-	top: 10%;
-    left: 0;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    padding: 0 20px;
+    width: 100%;
     color: #FF885B;
     z-index: 2;
+    padding: 0 20px;
 }
 
 .homepage-text h1 {
     font-size: 84px;
     color: #FF885B;
-    text-align: center;
     text-shadow: 
         -5px -5px 0 #FFE5CF,  
         5px -5px 0 #FFE5CF,
@@ -90,7 +103,6 @@ section {
 .homepage-text h2 {
     font-size: 40px;
     color: #FF885B;
-    text-align: center;
     text-shadow: 
         -3px -3px 0 #FFE5CF,  
         3px -3px 0 #FFE5CF,
@@ -105,18 +117,18 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    margin: 0;
-    padding: 0;
     z-index: 1;
 }
 
+/* Introduction Section */
 .introduction {
     padding: 10px;
     background-color: #FFE5CF;
 }
 
+/* SDGs Section */
 .sdgs {
-    padding: 10px 10px;
+    padding: 10px;
     background-color: #FFE5CF;
 }
 
@@ -125,8 +137,12 @@ section {
     overflow: hidden;
 }
 
-.sdg h2, .sdg p {
+.sdg h2 {
     text-align: left;
+}
+
+.sdg p {
+    text-align: justify;
 }
 
 .sdg img.sdg-image {
@@ -140,14 +156,97 @@ section {
     overflow: hidden;
 }
 
+/* Conclusion Section */
 .conclusion {
     padding: 10px;
     background-color: #FFE5CF;
 }
 
+.conclusion aside {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.conclusion aside video {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.conclusion aside ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.conclusion aside li a {
+    color: #557C56;
+    text-decoration: underline;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    padding: 20px;
+    text-align: center;
+    background-color: #FF885B;
+    color: #33372C;
+}
+
+.call-to-action h1,
+.call-to-action p,
+.call-to-action label {
+    text-align: center;
+    color: #33372C;
+}
+
+.call-to-action input[type="text"],
+.call-to-action input[type="email"],
+.call-to-action input[type="submit"] {
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: none;
+    color: #33372c !important; 
+    background-color: #FFE5CF;
+}
+
+.call-to-action input[type="text"]:hover,
+.call-to-action input[type="email"]:hover,
+.call-to-action input[type="submit"]:hover,
+.call-to-action input[type="text"]:focus,
+.call-to-action input[type="email"]:focus,
+.call-to-action input[type="submit"]:focus {
+    color: #33372c !important; 
+    background-color: #FFE5CF;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #557C56;
     color: #FFE5CF;
+}
+
+/* Content Link Styles */
+.content-link {
+    color: red;
+    font-family: Verdana, sans-serif;
+}
+
+.content-link:visited {
+    color: #557c56;
+}
+
+.content-link:hover {
+    color: #ff885b;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    text-decoration: none;
+}
+
+.content-link:active {
+    color: #33372c;
 }
