@@ -250,3 +250,32 @@ footer {
 .content-link:active {
     color: #33372c;
 }
+
+
+/* Social Media Section */
+/* General styling for icons */
+.icon {
+    display: inline-block;
+}
+
+/* Facebook Icon */
+.facebook.sprite {
+    background: url('social-media.png') no-repeat -236px -27px;
+    width: 128px;
+    height: 128px;
+}
+
+/* Twitter Icon */
+.twitter.sprite {
+    background: url('social-media.png') no-repeat -436px -37px;
+    width: 128px;
+    height: 108px;
+}
+
+/* YouTube Icon */
+.youtube.sprite {
+    background: url('social-media.png') no-repeat -636px -45px;
+    width: 128px;
+    height: 92px;
+}
+
