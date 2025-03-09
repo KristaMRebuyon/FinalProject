@@ -28,10 +28,12 @@ var questions = [
 
 var currentQuestion = 0;
 var score = 0;
+var answeredQuestions = new Array(questions.length).fill(false);
 
 function displayQuestion() {
     var questionElement = document.getElementById("question");
     var choicesElement = document.getElementById("choices");
+
     questionElement.innerHTML = questions[currentQuestion].question;
     choicesElement.innerHTML = "";
 
@@ -48,6 +50,7 @@ function displayQuestion() {
     document.getElementById("prev").style.display = currentQuestion === 0 ? "none" : "inline-block";
     document.getElementById("next").style.display = currentQuestion < questions.length - 1 ? "inline-block" : "none";
     document.getElementById("submit").style.display = currentQuestion === questions.length - 1 ? "inline-block" : "none";
+    document.getElementById("next").disabled = !answeredQuestions[currentQuestion];
 }
 
 function checkAnswer(selectedButton) {
@@ -56,11 +59,15 @@ function checkAnswer(selectedButton) {
 
     document.querySelectorAll(".choice-btn").forEach(btn => {
         btn.classList.remove("correct", "incorrect");
+        btn.disabled = true; // Prevent multiple clicks
     });
 
     if (selectedChoice === correctAnswer) {
         selectedButton.classList.add("correct");
-        score++;
+        if (!answeredQuestions[currentQuestion]) {
+            score++; // Increase score only if not already answered
+            answeredQuestions[currentQuestion] = true;
+        }
     } else {
         selectedButton.classList.add("incorrect");
     }
@@ -72,8 +79,6 @@ function nextQuestion() {
     if (currentQuestion < questions.length - 1) {
         currentQuestion++;
         displayQuestion();
-    } else {
-        showSubmit();
     }
 }
 
@@ -84,14 +89,6 @@ function prevQuestion() {
     }
 }
 
-function showSubmit() {
-    document.getElementById("question").innerHTML = "Ready to submit your answers?";
-    document.getElementById("choices").innerHTML = "";
-    document.getElementById("prev").style.display = "inline-block";
-    document.getElementById("submit").style.display = "inline-block";
-    document.getElementById("next").style.display = "none";
-}
-
 function submitQuiz() {
     document.getElementById("question").innerHTML = "Quiz Completed!";
     document.getElementById("choices").innerHTML = "You scored " + score + " out of " + questions.length + "!";
@@ -100,4 +97,9 @@ function submitQuiz() {
     document.getElementById("next").style.display = "none";
 }
 
-window.onload = displayQuestion;
+window.onload = function () {
+    score = 0;
+    answeredQuestions.fill(false);
+    displayQuestion();
+};
+
