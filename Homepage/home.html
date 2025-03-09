@@ -130,7 +130,21 @@
 		<input type="text" name="email" id="email">
 		<input type="submit" value="Submit">
 	</section>
+	
+	<!-- Quiz Section -->
+	<section class="quiz-container">
+		<h1>Test Your Knowledge!</h1>
+		<div id="quiz-box">
+			<p id="question"></p>
+			<div id="choices"></div>
+			<button id="prev" onclick="prevQuestion()">Previous</button>
+			<button id="next" onclick="nextQuestion()">Next</button>
+			<button id="submit" onclick="submitQuiz()">Submit</button>
+		</div>
+		<p id="result"></p>
+	</section>
 
+	<script src="quizScript.js"></script>
 
 	<!-- Footer -->
     <footer>
