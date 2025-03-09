@@ -46,7 +46,11 @@ C. Where the Quiz is Integrated
 D. How to Use the Quiz
 
 -Open home.html in a browser.
+
 -Scroll down to the quiz section.
+
 -Select an answer for each question and click "Next."
+
 -Review and submit your answers.
+
 -The final score will be displayed.
