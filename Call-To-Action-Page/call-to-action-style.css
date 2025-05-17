@@ -1,0 +1,257 @@
+:root {
+    --main-color: #FFE5CF; 
+}
+
+body {
+    background-color: var(--main-color);
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+	color: #33372C;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+    color: #33372C;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+section {
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #557C56;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.navbar img.logo {
+    width: 200px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-evenly; 
+    flex-grow: 1; 
+    margin-left: 1px; 
+}
+
+.navbar a {
+    color: #FFE5CF;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: #FF885B;
+    color: black;
+}
+
+/* Homepage Section */
+.homepage {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.homepage-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: #FF885B;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.homepage-text h1 {
+    font-size: 84px;
+    color: #FF885B;
+    text-shadow: 
+        -5px -5px 0 #FFE5CF,  
+        5px -5px 0 #FFE5CF,
+        -5px 5px 0 #FFE5CF,
+        5px 5px 0 #FFE5CF;
+}
+
+.homepage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* --- MAIN CONTENT STYLES --- */
+.action-content {
+    padding: 50px 20px;
+    background-color: #FFE5CF;
+    text-align: center;
+}
+
+.action-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #557C56;
+}
+
+.action-content p {
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.action-content ul {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+/* Social Media Section */
+.social-media {
+    background-color: #557c56;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-media .highlight {
+    color: #ffe5cf;
+    font-weight: bold;
+}
+
+.social-media .icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 10px; 
+}
+
+.icon {
+    display: inline-block;
+}
+
+.facebook.sprite {
+    background: url('Images/social-media.png') no-repeat;
+    background-position: -135px -15px;
+	width: 75px;
+	height: 76px;
+}
+
+.twitter.sprite {
+    background: url('Images/social-media.png') no-repeat;
+    background-position: -250px -20px;
+	width: 75px;
+	height: 64px;
+}
+
+.youtube.sprite {
+    background: url('Images/social-media.png') no-repeat;
+    background-position: -365px -25px;
+	width: 75px;
+	height: 54px;
+}
+
+.instagram.sprite {
+    background: url('Images/social-media.png') no-repeat;
+    background-position: -20px -15px;
+	width: 74px;
+	height: 75px;
+}
+
+.snapchat.sprite {
+    background: url('Images/social-media.png') no-repeat;
+    background-position: -135px -121px;
+	width: 75px;
+	height: 72px;
+}
+
+.pinterest.sprite {
+    background: url('Images/social-media.png') no-repeat;
+    background-position: -595px -119px;
+	width: 75px;
+	height: 75px;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    background-color: #ffe5cf;
+    color: #33372c;
+    text-align: center;
+    padding: 20px;
+}
+
+.call-to-action p {
+    text-align: center;
+}
+
+.call-to-action input[type="text"]:focus,
+.call-to-action input[type="email"]:focus,
+.call-to-action input[type="submit"]:focus {
+    outline: none; 
+    background-color: #fff3b3; 
+    border: 2px solid #ff885b; 
+    color: #33372c; 
+}
+
+.call-to-action input[type="text"],
+.call-to-action input[type="email"],
+.call-to-action input[type="submit"] {
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: none;
+    color: #33372c;
+    background-color: white;
+}
+
+.call-to-action input[type="submit"] {
+    background-color: #ff885b;
+    color: #ffe5cf;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #557C56;
+    color: #FFE5CF;
+}
