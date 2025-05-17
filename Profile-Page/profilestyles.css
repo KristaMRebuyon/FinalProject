@@ -1,0 +1,124 @@
+:root {
+    --main-color: #FFE5CF;
+    --accent-color: #FF885B;
+    --dark-green: #557C56;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--main-color);
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #33372C;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--dark-green);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar img.logo {
+    width: 200px;
+    height: 100px;
+    margin: 0;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    margin-left: 1px;
+}
+
+.navbar a {
+    color: var(--main-color);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+/* Hero Section */
+.hero-header {
+    position: relative;
+    background-image: url("Images/profile.png");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-header h1 {
+    font-size: 64px;
+    color: var(--accent-color);
+    font-weight: bold;
+    text-align: center;
+    padding: 0 20px;
+    text-shadow:
+        -4px -4px 0 white,
+        4px -4px 0 white,
+        -4px 4px 0 white,
+        4px 4px 0 white;
+}
+
+/* Main Content */
+main {
+    z-index: 2;
+    position: relative;
+}
+
+/* Profile Info Section */
+.profile-info {
+    max-width: 800px;
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    border: 5px solid var(--dark-green);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.profile-info:hover {
+    transform: scale(1.02);
+}
+
+.profile-info h2 {
+    color: var(--accent-color);
+    font-size: 32px;
+    margin-bottom: 24px;
+    text-align: center;
+    text-shadow: 1px 1px 0 var(--main-color);
+    border-bottom: 2px dashed var(--dark-green);
+    padding-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 20px;
+    margin: 16px 0;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--dark-green);
+    color: var(--main-color);
+}
