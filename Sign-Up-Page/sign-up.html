@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join the Sachet-Free Movement</title>
+    <link rel="icon" type="image/png" href="Images/icon.png">
+    <link rel="stylesheet" href="sign-upstyles.css">
+    <script src="sign-upscript.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="Images/logo.png" alt="Logo" class="logo">
+            <nav> 
+                <a href="../Homepage/home.html" class="nav-link">Home</a>
+                <a href="../Sachet-Problem-Page/sachet-problem.html" class="nav-link">Sachet Problem</a>
+                <a href="../Cultural-Background-Page/cultural-background.html" class="nav-link">Cultural Background</a>
+                <a href="../Sustainable-Solutions-Page/sustainable-solutions.html" class="nav-link">Sustainable Solutions</a>
+                <a href="../Call-To-Action-Page/call-to-action.html" class="nav-link">Call to Action</a>
+                <a href="../Sign-Up-Page/sign-up.html" class="nav-link active">Sign Up</a>
+                <a href="../Profile-Page/profile.html" class="nav-link">Profile</a>
+            </nav>
+        </div>
+    </header>
+	
+    <section class="signup-hero">
+        <img src="Images/signup.png" alt="Signup Background">
+		<img src="Images/logo-removed.png" alt="Logo" class="logo">
+        <h1 class="site-title">EnviroHelp</h1> 
+        <div class="signup-hero-text">
+            <h1>Join Our Sachet-Free Campaign</h1>
+            <h2>We're campaigning for a sachet-free Philippines 🌊. Join us to protect our planet and future!</h2>
+        </div>
+    </section>
+
+    <main>
+        <section class="signup-section">
+            <form id="signupForm" class="signup-form">
+                <label><strong>First Name <span class="required">*</span></strong>
+                    <input type="text" id="firstName"><span class="required-msg" style="display:none;"></span>
+                </label>
+
+                <label><strong>Last Name <span class="required">*</span></strong>
+                    <input type="text" id="lastName"><span class="required-msg" style="display:none;"></span>
+                </label>
+                
+                <fieldset>
+                    <legend><strong>Sex <span class="required">*</span></strong></legend>
+                    <label><input type="radio" name="sex" value="Male"> Male</label>
+                    <label><input type="radio" name="sex" value="Female"> Female</label>
+                    <label><input type="radio" name="sex" value="Prefer not to say"> Prefer not to say</label>
+                    <span class="required-msg" id="sexRequired" style="display:none;"></span>
+                </fieldset>
+
+                <label><strong>Email Address <span class="required">*</span></strong>
+                    <input type="text" id="email"><span class="required-msg" style="display:none;"></span>
+                </label>
+
+                <label><strong>Password <span class="required">*</span></strong>
+                    <input type="password" id="password"><span class="required-msg" style="display:none;"></span>
+                </label>
+
+                <label><strong>Contact Number</strong>
+                    <input type="text" id="contact">
+                </label>
+
+                <label><strong>Why are you supporting this campaign? <span class="required">*</span></strong>
+                    <textarea id="reason"></textarea><span class="required-msg" style="display:none;"></span>
+                </label>
+
+                <button type="submit">Sign Me Up!</button>
+            </form>
+        </section>
+    </main>
+	
+	<!-- Footer -->
+    <footer>
+        <h5>&copy; 2024 EnviroHelp</h5>
+    </footer>
+	
+</body>
+</html>

@@ -1,0 +1,253 @@
+/* Color Variables */
+:root {
+    --main-color: #FFE5CF;
+    --accent-color: #FF885B;
+    --dark-green: #557C56;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--main-color);
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #33372C;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+    color: #33372C;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--dark-green);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar img.logo {
+    width: 200px;
+    height: 100px;
+    margin: 0;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    margin-left: 1px;
+}
+
+.navbar a {
+    color: var(--main-color);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+	
+/* Hero Section */
+.signup-hero {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.signup-hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.signup-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.signup-hero-text h1 {
+    font-size: 72px;
+    color: var(--accent-color);
+    text-shadow:
+        -5px -5px 0 var(--main-color),
+        5px -5px 0 var(--main-color),
+        -5px 5px 0 var(--main-color),
+        5px 5px 0 var(--main-color);
+}
+
+.signup-hero-text h2 {
+    font-size: 32px;
+    color: var(--accent-color);
+    text-shadow:
+        -3px -3px 0 var(--main-color),
+        3px -3px 0 var(--main-color),
+        -3px 3px 0 var(--main-color),
+        3px 3px 0 var(--main-color);
+}
+
+/* Centered Logo and Title over Hero */
+.signup-hero .logo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 200px;
+    height: auto;
+}
+
+/* EnviroHelp Text Styling */
+.site-title {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    font-family: Tahoma, sans-serif; /* Match tagline font */
+    font-size: 60px;
+    color: var(--accent-color);
+    text-align: center;
+    text-shadow:
+        -4px -4px 0 var(--main-color),
+        4px -4px 0 var(--main-color),
+        -4px 4px 0 var(--main-color),
+        4px 4px 0 var(--main-color);
+}
+
+/* Sign-Up Section */
+.signup-section {
+    background-color: var(--main-color);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Form Styles */
+.signup-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 600px;
+    border: 4px solid var(--dark-green);
+}
+
+.signup-form h1 {
+    text-align: center;
+    color: var(--dark-green);
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.signup-form label,
+.signup-form fieldset {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.signup-form input,
+.signup-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+}
+
+.signup-form input:focus,
+.signup-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Radio Button Fixes */
+.signup-form fieldset {
+    border: none;
+}
+
+.signup-form fieldset label {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+.signup-form fieldset legend {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Required field asterisk */
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+/* Submit Button */
+.signup-form button {
+    background-color: var(--accent-color);
+    color: var(--main-color);
+    border: none;
+    padding: 14px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.signup-form button:hover {
+    background-color: var(--dark-green);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--dark-green);
+    color: var(--main-color);
+}
